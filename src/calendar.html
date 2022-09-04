@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer type="module" src="calendar.js"></script>
+    <script defer src="dragform.js"></script>
+    <script defer type="module" src="formlogic.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form class="addschedule hidden">
+        <div class="headerbar">
+            <a href="#" id="hiddenform"><i class="fa-solid fa-angle-right fa-2x"></i></a>
+        </div>
+        <fieldset style="border: none;">
+            <h1 style="font-size: 2em;">Add Work Time</h1>
+            From. <input id="from" type="date" min="2020-01-01" max="2030-01-01"/>&nbsp;&nbsp;
+            To. <input id="to" type="date" min="2020-01-01" max="2030-01-01"/>
+            <br><br>
+            <input type="radio" name="workshift" id="twowork"/>2교대
+            <input type="radio" name="workshift" id="threework"/>3교대
+        </fieldset>
+        <fieldset class="inputmember">
+            <legend>참여 인원</legend>
+        </fieldset>
+        <a href="#"><i id="addmemberbtn" class="fa-solid fa-plus"></i></a><br>
+        <input class="submitschedule"type="submit" />
+    </form>
+    <div class="schedulebtn">
+        <a href="#" id="showform"><i class="fa-solid fa-circle-plus fa-3x" style="color: rgb(125, 235, 255);"></i></a>
+    </div>
+    <div class="calendar">
+        <div class="currentDateHeader">
+            <a href="#" id="preBtn"><i class="fa-solid fa-angle-left fa-2x"></i></a>
+            <h1 style="margin-inline: 30px;" class="currentDate"></h1>
+            <a href="#" id="NextBtn"><i class="fa-solid fa-angle-right fa-2x"></i></a>
+        </div>   
+        <div class="days">
+            <div style="color: red;">Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div style="color: blue;">Sat</div>
+        </div>
+    </div>
+</body>
+</html>
