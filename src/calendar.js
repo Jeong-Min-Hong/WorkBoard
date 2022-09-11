@@ -107,6 +107,8 @@ nextBtn.addEventListener('click', () => {
     document.querySelector(".day").remove();
     renderCalendar(pointerDate);
 })
+console.log("good");
+console.log("ggod");
 
 dateInit(date);
 export let pointerDate = date;
